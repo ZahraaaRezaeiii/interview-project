@@ -1,9 +1,10 @@
 <h2>Component 1</h2>
 <button (click)="addChild()">Add Child Component 2</button>
-<div class="container" cdkDropListGroup>
-  <div class="container-info" cdkDropList (cdkDropListDropped)="onDrop($event)">
-    <div *ngFor="let child of children" cdkDrag>
+<div class="example-box" cdkDrag cdkDropListGroup>
+  <div cdkDropList (cdkDropListDropped)="onDrop($event)">
+    <div *ngFor="let child of children;" cdkDragPreviewContainer="parent">
       <app-component2></app-component2>
+      <div>{{ children.length }}</div>
     </div>
   </div>
 </div>
