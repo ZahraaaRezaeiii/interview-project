@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class Component2Component {
 
+  children: any[] = [];
+
+  addChild() {
+    this.children.push({});
+  }
+
 }

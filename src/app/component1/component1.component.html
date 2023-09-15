@@ -1,3 +1,5 @@
-<button (click)="incrementCounter()">Increment Counter</button>
-<app-second *ngIf="showSecondComponent"></app-second>
-<div *ngFor="let item of secondComponentList">{{ item }}</div>
+<h2>Component 1</h2>
+<button (click)="addChild()">Add Child Component 2</button>
+<div *ngFor="let child of children">
+  <app-component1></app-component1>
+</div>

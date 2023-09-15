@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { toggleChildComponent } from '../state/example.actions';
 
 @Component({
   selector: 'app-component1',
@@ -9,14 +8,12 @@ import { toggleChildComponent } from '../state/example.actions';
 })
 export class Component1Component {
 
-  showSecondComponent: boolean = false;
-  secondComponentList: string[] = [];
+  constructor() {}
 
-  constructor(private store: Store) {}
+  children: any[] = [];
 
-  incrementCounter() {
-    this.store.dispatch(increment({}));
-    this.showSecondComponent = this.secondComponentList.length > 0;
+  addChild() {
+    this.children.push({});
   }
 
 }

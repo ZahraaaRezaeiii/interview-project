@@ -1,1 +1,5 @@
-<p>component2 works!</p>
+<h3>Component 2</h3>
+<button (click)="addChild()">Add Child Component 1</button>
+<div *ngFor="let child of children">
+  <app-component1></app-component1>
+</div>
