@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Component1Component } from './component1/component1.component';
 import { Component2Component } from './component2/component2.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { Component2Component } from './component2/component2.component';
   ],
   imports: [
     BrowserModule,
+    DragDropModule,
     AppRoutingModule,
   ],
   providers: [],
