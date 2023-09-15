@@ -6,11 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./component2.component.scss']
 })
 export class Component2Component {
-
-  children: any[] = [];
-
-  addChild() {
-    this.children.push({});
-  }
+  compNumber: number=2;
+  num: number = 1;
 
 }

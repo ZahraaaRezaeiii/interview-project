@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { CdkDragDrop, moveItemInArray, CdkDrag } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-component1',
@@ -8,20 +6,7 @@ import { CdkDragDrop, moveItemInArray, CdkDrag } from '@angular/cdk/drag-drop';
   styleUrls: ['./component1.component.scss']
 })
 export class Component1Component {
-
-  constructor() {}
-
-  children: any[] = [];
-
-  addChild() {
-    this.children.push({});
-  }
-
-  onDrop(event: CdkDragDrop<string[]>){
-    debugger;
-    if(event.previousIndex !== event.currentIndex) {
-      moveItemInArray(this.children, event.previousIndex, event.currentIndex);
-    }
-  }
+  compNumber: number=1;
+  num: number = 2;
 
 }

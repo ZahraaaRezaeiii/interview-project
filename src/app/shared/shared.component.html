@@ -1,0 +1,14 @@
+<h2>Component {{compNumber}}</h2>
+<button (click)="addChild()">Add Child Component {{ num }}</button>
+<div class="example-box" cdkDrag cdkDropListGroup>
+  <div cdkDropList (cdkDropListDropped)="onDrop($event)">
+    <div *ngFor="let child of children;" cdkDragPreviewContainer="parent">
+      <ng-container *ngIf="compNumber == 1">
+        <app-component2></app-component2>
+      </ng-container>
+      <ng-container *ngIf="compNumber == 2">
+        <app-component1></app-component1>
+      </ng-container>
+    </div>
+  </div>
+</div>
